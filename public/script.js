@@ -20,9 +20,9 @@ headers.forEach((header) => {
     // Toggle submenu yang diklik
     submenu.classList.toggle("show");
     header.classList.toggle("active");
+    // Yesh king
   });
 });
-
 
 async function showDashboard() {
   const res = await fetch("/comp/dashboard");
@@ -31,9 +31,9 @@ async function showDashboard() {
   const circle = document.querySelector(".circular");
   const value = document.getElementById("percentValue"),
     inputValue = value.dataset.targetp;
-  
+
   let percent = 0;
-  
+
   const interval = setInterval(() => {
     value.innerHTML = `${percent}% <span>Kepenuhan</span>`;
     circle.style.background = `conic-gradient(#4285f4 ${
