@@ -1,0 +1,30 @@
+<h1>Trash Dashboard</h1>
+
+      <div class="grid">
+        <div class="container">
+          <h2>Project IoT</h2>
+          <img
+            src="/image/funny-trash-can-cartoon-illustration-removebg-preview.png"
+            alt=""
+          />
+          <span>Smart Trash Alert</span>
+        </div>
+
+        <div class="container">
+          <h2>Jumlah Tong Sampah</h2>
+          <div class="jumlah"><%= dataLength %></div>
+        </div>
+
+        <div class="container">
+          <h2>Rata-rata Sampah Penuh</h2>
+          <div class="circular">
+            <div
+              class="value"
+              id="percentValue"
+              data-targetp="<%= valueAvgPercentage %>"
+            >
+              0% <span>Kepenuhan</span>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,35 @@
+<h1>Detail <%= trashData.title %></h1>
+
+<div class="flex">
+  <div class="top">
+    <img src="/image/trash-bin.png" alt="trash bin" />
+    <div class="detail-1">
+      <div><%= trashData.maxDistance %> cm</div>
+      <div><%= trashData.distance %> cm</div>
+      <div id="trash-status"><%= trashData.status %></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="detail-2">
+      <h2>Kepenuhan Tong Sampah</h2>
+      <div class="circular">
+        <div
+          class="value"
+          id="percentValue"
+          data-targetp="<%= trashData.percentage %>"
+        >
+          0% <span>Kepenuhan</span>
+        </div>
+      </div>
+    </div>
+    <div class="detail-3">
+      <h2>Diperbarui Pada</h2>
+
+      <div style="display: flex; flex-direction: column-reverse;align-items: center;margin-block: 25px;">
+        <% trashData.lastUpdate.split(' ').forEach(txt => {%>
+        <span><%= txt %></span>
+        <%}); %>
+      </div>
+    </div>
+  </div>
+</div>
